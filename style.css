@@ -16,6 +16,7 @@
 header {
   position: relative;
   height: 410px;
+  margin-bottom: 15em;
 }
 
 .background-decoration {
@@ -47,17 +48,31 @@ h1 {
   font-size: 3rem;
 }
 
+.about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(1em + 3vw);
+}
+
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
   padding: 1em;
 }
 
-.about-me,
-.my-work {
+.about-me, .my-work {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin-bottom: 4em;
+}
+
+.my-work-title {
+  text-align: center;
 }
 
 .about-me-title,
@@ -68,8 +83,7 @@ main {
 }
 
 .cards-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 3em;
 }
 
@@ -81,7 +95,7 @@ main {
 }
 
 .project-screenshot > img {
-  width: 300px;
+  max-width: 290px;
   height: auto;
 }
 
@@ -113,6 +127,10 @@ svg {
   width: 1em;
 }
 
+footer {
+    background-color: var(--secondary-color);
+}
+
 .contact-me {
   background-color: var(--secondary-color);
   color: var(--primary-color);
@@ -127,10 +145,11 @@ svg {
 .footer-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 15px;
 }
+
 .phone-and-email {
   align-self: flex-start;
 }
@@ -145,8 +164,95 @@ footer i {
 
 .footer-image {
   background-image: url(./assets/pexels-olly-3778680.jpg);
-  min-height: 13em;
+  padding: 9em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media (min-width: 767px) {
+  main {
+    max-width: 650px;
+  }
+
+  .about-me {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+
+  .my-work-title {
+    align-self: flex-start;
+  }
+  
+  .my-work {
+    margin-bottom: 10em;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-image {
+    background-image: url(./assets/pexels-olly-3778680.jpg);
+    padding: 13em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .contact-me {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    margin-bottom: 10em;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -22em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .background-image {
+    position: relative;
+    transform: translate(0, 0);
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    padding: 12em 3em;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: 170px;
+    left: 0;
+  }
+
+  .about-me {
+    max-width: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color: var(--primary-color);
+    align-items: flex-start;
+    gap: 2em;
+    margin-bottom: 0;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
