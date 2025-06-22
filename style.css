@@ -1,10 +1,12 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-  --primary-color: rgb(255,255,255);
-  --secondary-color: rgb(8,145,178);
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(8, 145, 178);
 }
 
 /* body {
@@ -20,37 +22,37 @@ header {
   height: 100%;
   background-color: var(--secondary-color);
   clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 100%);
-  /* position: relative; */
   z-index: 0;
 }
 
 .background-image {
   position: absolute;
-  top: 2em;
-  left: 12%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
-  height: 90%;
-  /* width: 100%; */
   background-image: url(./assets/pexels-olly-3777564.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   display: flex;
   align-items: flex-end;
-  padding: 1em;
+  padding: 11em 8em;
 }
 
 h1 {
+  position: absolute;
+  top: 70%;
+  left: 10%;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 main {
   padding: 1em;
 }
 
-.about-me, .my-work {
-  /* padding: 1em; */
+.about-me,
+.my-work {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +60,9 @@ main {
   margin-bottom: 4em;
 }
 
-.about-me-title, .my-work-title, .contact-me-title {
+.about-me-title,
+.my-work-title,
+.contact-me-title {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -72,7 +76,8 @@ main {
 .project-card {
   max-width: 300px;
   padding-bottom: 3em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .project-screenshot > img {
@@ -92,15 +97,12 @@ main {
 }
 
 .project-links {
-  margin-right: .8em;
+  margin-right: 0.8em;
 }
 
 .project-description {
   padding: 10px;
 }
-/* i.devicon-linkedin-plain.colored {
-  font-size: large;
-} */
 
 i {
   display: inline-block;
@@ -119,6 +121,7 @@ svg {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  padding-bottom: 3em;
 }
 
 .footer-text {
