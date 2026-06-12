@@ -1,7 +1,20 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :root {
@@ -13,54 +26,64 @@
   min-height: 100vh;
 } */
 
-header {
-  position: relative;
-  height: 410px;
-  margin-bottom: 15em;
-}
-
-.background-decoration {
-  height: 100%;
-  background-color: var(--secondary-color);
-  clip-path: polygon(0 0, 100% 0%, 100% 40%, 0 100%);
-  z-index: 0;
-}
-
-.background-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  background-image: url(./assets/images/pexels-shvetsa-3727474.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  padding: 11em 8em;
-}
-
-h1 {
-  position: absolute;
-  top: 70%;
-  left: 10%;
-  color: white;
-  font-size: 3rem;
-}
-
-.about-me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: calc(1em + 3vw);
-}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  padding: 1em;
+  gap: 3rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  clip-path: polygon(0 0, 100% 0%, 100% 25%, 0 47%);
+}
+
+.profile-image-container {
+  position: relative;
+  margin-top: 1rem;
+}
+
+h1 {
+  position: absolute;
+  top: 68%;
+  left: 7%;
+  color: white;
+  font-size: 4rem;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: "Roboto";
+}
+
+.about-me {
+  padding: calc(.5rem + 3vw);
+}
+
+.about-me p {
+  color: #616060;
+  line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
 }
 
 .about-me, .my-work {
@@ -68,18 +91,10 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 4em;
 }
 
 .my-work-title {
   text-align: center;
-}
-
-.about-me-title,
-.my-work-title,
-.contact-me-title {
-  font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .cards-container {
@@ -120,7 +135,8 @@ main {
 
 i {
   display: inline-block;
-  width: 1.5em;
+  width: 1.5rem;
+  font-size: 1.5rem;
 }
 
 svg {
