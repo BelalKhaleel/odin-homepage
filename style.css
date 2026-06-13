@@ -22,17 +22,18 @@ html {
   --secondary-color: rgb(8, 145, 178);
 }
 
-/* body {
-  min-height: 100vh;
-} */
-
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .hero {
@@ -74,6 +75,10 @@ p {
 
 .about-me {
   padding: calc(.5rem + 3vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .about-me p {
@@ -86,11 +91,11 @@ p {
   gap: 1rem;
 }
 
-.about-me, .my-work {
+.my-work {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 1.5rem;
 }
 
 .my-work-title {
@@ -103,87 +108,99 @@ p {
 }
 
 .project-card {
-  max-width: 300px;
+  max-width: 280px;
   padding-bottom: 3em;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.project-screenshot > img {
-  max-width: 290px;
-  height: auto;
+.project-details {
+  padding: 10px;
 }
 
 .project-name-and-links {
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  align-items: center;
 }
 
 .project-name {
   display: inline-block;
   margin-left: 1em;
+  font-size: 1.2rem;
 }
 
 .project-links {
-  margin-right: 0.8em;
+  display: flex;
+  gap: 10px;
 }
 
 .project-description {
+  font-size: .9rem;
+  color: #616060;
+  line-height: 1.2;
   padding: 10px;
 }
 
 i {
-  display: inline-block;
-  width: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 svg {
-  width: 1em;
+  width: 1.1rem;
 }
 
 footer {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .contact-me {
-  background-color: var(--secondary-color);
   color: var(--primary-color);
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  padding-bottom: 3em;
+  padding-bottom: 3rem;
 }
 
 .footer-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 15px;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.phone-and-email {
-  align-self: flex-start;
+.footer-text p {
+  font-size: 1.2rem;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
 }
 
 .phone-and-email svg {
-  fill: var(--primary-color);
+  display: none;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
 footer i {
-  font-size: 1.5em;
+  font-size: 2.2rem;
 }
 
-.footer-image {
-  background-image: url(./assets/images/pexels-shvetsa-3727464.jpg);
-  padding: 9em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.footer-image-container {
+  height: 480px;
+}
+
+.footer-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 767px) {
