@@ -20,6 +20,8 @@ html {
 :root {
   --primary-color: rgb(255, 255, 255);
   --secondary-color: rgb(8, 145, 178);
+  --about-me-img-width: 270px;
+  --about-me-img-height: 405px;
 }
 
 .wrapper {
@@ -208,6 +210,13 @@ p {
   object-fit: cover;
 }
 
+@media (min-width: 425px) {
+  .about-me img {
+    width: calc(var(--about-me-img-width) + 15vw);
+    height: calc(var(--about-me-img-height) + 15vw);
+  }
+
+}
 @media (min-width: 767px) {
   .wrapper {
     gap: 2rem;
@@ -235,28 +244,30 @@ p {
     padding: 2rem;
     padding-top: 5rem;
     margin-top: 8rem;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  }
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+}
 
   .profile-image-container {
     width: 267px;
-    height: 199px;
-    position: static;
+    height: 200px;
+    position: relative;
     float: left;
   }
 
   .about-me img {
     position: absolute;
-    width: 43%;
-    height: 43%;
-    top: 37px;
-    left: 35px;
+    width: 20rem;
+    height: 23rem;
+    top: -171px;
+    left: -77px;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   h1 {
-    top: 7%;
-    left: 38%;
+    top: -79%;
+    left: 67%;
+    width: 28rem;
   }
 
   p.about-details {
