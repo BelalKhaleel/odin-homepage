@@ -215,8 +215,8 @@ p {
     width: calc(var(--about-me-img-width) + 15vw);
     height: calc(var(--about-me-img-height) + 15vw);
   }
-
 }
+
 @media (min-width: 767px) {
   .wrapper {
     gap: 2rem;
