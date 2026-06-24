@@ -237,6 +237,7 @@ p {
 
   .about-me .content-container {
     display: block;
+    position: relative;
     background-color: white;
     max-width: 592px;
     z-index: 1;
@@ -255,13 +256,17 @@ p {
   .about-me img {
     width: 20rem;
     height: 23rem;
-    transform: translate(-77px, -171px);
+    position: absolute;
+    top: -89%;
+    left: -29%;
     object-fit: cover;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 
   h1 {
-    transform: translate(172px, -525px);
+    position: absolute;
+    top: -10%;
+    left: -62%;
     width: 28rem;
   }
 
@@ -329,27 +334,31 @@ p {
   .wrapper {
     gap: 4rem;
   }
-
-  .profile-image-container {
-    position: absolute;
-    left: 0;
-  }
-
+  
   .about-me .content-container {
     position: relative;
     margin-left: 27rem;
     margin-top: 6rem;
   }
-    
+
+  .profile-image-container {
+    position: absolute;
+    left: 0;
+  }
         
   .about-me img {
     width: 28rem;
     height: 28rem;
-    transform: translate(-448px, -121px);
+    position: absolute;
+    top: -59%;
+    left: -167%;
   }
 
   h1 {
-    transform: translate(-436px, -198px);
+    width: 28rem;
+    position: absolute;
+    top: 194%;
+    left: -170%;
   }
 
   .about-me-title {
