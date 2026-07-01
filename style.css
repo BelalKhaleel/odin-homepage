@@ -65,15 +65,21 @@ html {
   position: relative;
 }
 
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
 .about-me i {
   font-size: 1.7rem;
 }
 
 h1 {
-  position: relative;
-  transform: translate(15px, -130px);
+  position: absolute;
+  top: 66%;
+  left: 5%;
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 5rem;
   z-index: 1;
 }
 
@@ -191,6 +197,7 @@ p {
 .phone-and-email a {
   color: var(--primary-color);
 }
+
 .phone-and-email
  svg {
   display: none;
