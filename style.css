@@ -76,10 +76,10 @@ html {
 
 h1 {
   position: absolute;
-  top: 66%;
+  top: 69%;
   left: 5%;
   color: var(--primary-color);
-  font-size: 5rem;
+  font-size: 4rem;
   z-index: 1;
 }
 
